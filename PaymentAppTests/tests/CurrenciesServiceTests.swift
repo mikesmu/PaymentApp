@@ -38,7 +38,7 @@ class CurrenciesServiceTests: XCTestCase {
             case .error(let error):
                 XCTFail("expected to get data, but got error \(error)")
             case .success(let payload):
-                XCTAssertEqual(payload, fakeTable)
+                XCTAssertEqual(payload.rates.count, fakeTable.rates.count)
             }
             testExpectation.fulfill()
         })
