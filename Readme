@@ -1,0 +1,17 @@
+ConvertApp:
+
+This is a simple currency converter app. 
+Its uses data from free, public api to download rates to calculate desired rate in selected currency.
+Default currency is `GBP` with amount of 100.0.
+
+Contains:
+- soure code for the app in `PaymentApp` folder
+- unit tests in `PaymentAppTests` folder
+
+Usage:
+
+- main view presents downloaded rates in collectionView with `GBP` as default currency
+- each cell show a flag, short annd long currency name and input
+- input can be used to provide given amount of money
+- each time user begins to edit that amount, its cell moves to the top
+- currencies are refresh on a timer, every 2 seconds with initial 2 seconds delay

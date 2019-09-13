@@ -1,11 +1,3 @@
-//
-//  ViewController.swift
-//  RevolutTest
-//
-//  Created by Michał Smulski on 23/01/2019.
-//  Copyright © 2019 Michał Smulski. All rights reserved.
-//
-
 import UIKit
 
 class ViewController: UIViewController {
@@ -30,6 +22,8 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        title = "Converter"
         
         let layout = UICollectionViewFlowLayout()
         layout.itemSize = CGSize(width: 190.0, height: 100.0)

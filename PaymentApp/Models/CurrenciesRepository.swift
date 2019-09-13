@@ -1,11 +1,3 @@
-//
-//  CurrenciesRepository.swift
-//  RevolutTest
-//
-//  Created by Michał Smulski on 24/01/2019.
-//  Copyright © 2019 Michał Smulski. All rights reserved.
-//
-
 import Foundation
 
 class CurrenciesRepository {
@@ -21,7 +13,7 @@ class CurrenciesRepository {
             switch result {
             case .success(let table):
                 self?.currenciesTable = table
-                completion([Rate(currencySymbol: table.base, value: 1.0)] + table.rates)
+                completion([Rate(currencySymbol: table.base, value: 1.0)] + table.rates.filter { $0.currencyCode != base })
             case .error(_):
                 completion([])
             }

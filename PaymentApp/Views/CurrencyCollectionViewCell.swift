@@ -1,11 +1,3 @@
-//
-//  CurrencyCollectionViewCell.swift
-//  PaymentApp
-//
-//  Created by Michal Smulski on 13/09/2019.
-//  Copyright © 2019 msmulski. All rights reserved.
-//
-
 import UIKit
 
 protocol CurrencyCollectionViewCellDelegate: AnyObject {

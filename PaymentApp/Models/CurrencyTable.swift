@@ -1,11 +1,3 @@
-//
-//  CurrencyTable.swift
-//  RevolutTest
-//
-//  Created by Michał Smulski on 23/01/2019.
-//  Copyright © 2019 Michał Smulski. All rights reserved.
-//
-
 import Foundation
 
 struct CurrencyTable: Codable, Equatable {
