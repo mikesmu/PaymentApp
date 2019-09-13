@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MakeDepositViewController" customModule="WHApplePay" customModuleProvider="target">
+            <connections>
+                <outlet property="actionButtonsStackView" destination="O26-Eo-iG5" id="sf4-6X-MEx"/>
+                <outlet property="amountBackgroundView" destination="ui7-wq-51t" id="6X5-10-PrR"/>
+                <outlet property="amountErrorLabel" destination="RM1-ZO-4RO" id="QoE-KB-1hO"/>
+                <outlet property="amountSectionHeighConstraint" destination="HV0-Zk-ovh" id="lVj-ol-VA5"/>
+                <outlet property="amountTextField" destination="2gl-kG-Rqt" id="1Kh-VR-tqp"/>
+                <outlet property="amountUnderlineView" destination="lyP-DC-wR7" id="7gw-vm-vrB"/>
+                <outlet property="buttonsHeightConstraint" destination="LNZ-Zd-w25" id="2ak-yK-kHe"/>
+                <outlet property="depositSectionSubtitleLabel" destination="gyv-fO-usV" id="W5X-HX-srK"/>
+                <outlet property="depositSectionTitleLabel" destination="djk-Lb-Wdf" id="2X5-M7-mqW"/>
+                <outlet property="errorView" destination="cCS-Ba-4qf" id="UsC-fT-Sb0"/>
+                <outlet property="headerImageHeightConstraint" destination="UcT-7N-kIX" id="m61-vm-bxQ"/>
+                <outlet property="mainStackView" destination="IVd-24-5GG" id="3xF-12-twN"/>
+                <outlet property="mainStackViewTopConstraint" destination="bIy-fD-l0F" id="eFF-sD-hz4"/>
+                <outlet property="multiplePaymentsButton" destination="840-7Z-SRL" id="0D1-Sf-NJ7"/>
+                <outlet property="multiplePaymentsLabel" destination="g5f-IF-mCO" id="zMc-fJ-tsN"/>
+                <outlet property="pocfStackView" destination="vHS-Lw-Lma" id="72q-96-W7c"/>
+                <outlet property="pocfTextView" destination="h9B-tB-J8p" id="dAa-Vz-Hju"/>
+                <outlet property="validationStatusImageView" destination="u9J-nV-lAb" id="bG0-qg-T3c"/>
+                <outlet property="view" destination="iN0-l3-epB" id="wcV-ps-Qlt"/>
+                <outletCollection property="closingKeyboardGestureRecognizers" destination="Ltd-dv-Ehh" collectionClass="NSMutableArray" id="4lb-uu-no0"/>
+                <outletCollection property="closingKeyboardGestureRecognizers" destination="bGA-T8-bfO" collectionClass="NSMutableArray" id="C5i-UI-TfQ"/>
+                <outletCollection property="quickDepositButtons" destination="1eT-7U-FXc" collectionClass="NSMutableArray" id="Wcc-d3-eCc"/>
+                <outletCollection property="quickDepositButtons" destination="f3T-xd-dqV" collectionClass="NSMutableArray" id="DGq-qR-GVi"/>
+                <outletCollection property="separators" destination="Lhg-ND-0On" collectionClass="NSMutableArray" id="wdP-cL-EDG"/>
+                <outletCollection property="quickDepositButtons" destination="20P-Ee-GYh" collectionClass="NSMutableArray" id="ZbM-Wf-n8f"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" placeholderIntrinsicWidth="414" placeholderIntrinsicHeight="338" translatesAutoresizingMaskIntoConstraints="NO" id="ZEK-hR-QF4">
+                    <rect key="frame" x="0.0" y="20" width="414" height="716"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="IVd-24-5GG" userLabel="payments">
+                            <rect key="frame" x="20" y="64" width="374" height="298"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="Zwk-W9-wgY">
+                                    <rect key="frame" x="0.0" y="0.0" width="374" height="234"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="240" verticalHuggingPriority="230" horizontalCompressionResistancePriority="760" verticalCompressionResistancePriority="765" axis="vertical" alignment="center" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="VYN-wU-Kfv" userLabel="header">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="104"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_apple_pay" translatesAutoresizingMaskIntoConstraints="NO" id="Hhb-mi-f9V">
+                                                    <rect key="frame" x="124.66666666666666" y="0.0" width="125" height="68"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="68" id="UcT-7N-kIX"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="TIn-8k-4Bc" userLabel="labels">
+                                                    <rect key="frame" x="47" y="92" width="280" height="12"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalCompressionResistancePriority="760" verticalCompressionResistancePriority="759" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="djk-Lb-Wdf">
+                                                            <rect key="frame" x="0.0" y="0.0" width="280" height="0.0"/>
+                                                            <accessibility key="accessibilityConfiguration" label="WHApplePay.Deposit.header.title"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                            <nil key="highlightedColor"/>
+                                                            <size key="shadowOffset" width="0.0" height="0.0"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="240" verticalHuggingPriority="240" horizontalCompressionResistancePriority="760" verticalCompressionResistancePriority="760" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gyv-fO-usV" userLabel="Amount">
+                                                            <rect key="frame" x="0.0" y="12" width="280" height="0.0"/>
+                                                            <accessibility key="accessibilityConfiguration" label="WHApplePay.Deposit.header.subtitle"/>
+                                                            <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="280" id="Amq-kp-SGz"/>
+                                                    </constraints>
+                                                </stackView>
+                                            </subviews>
+                                        </stackView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="rte-v9-Ilq" userLabel="amount">
+                                            <rect key="frame" x="0.0" y="130" width="374" height="104"/>
+                                            <subviews>
+                                                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RSN-fY-2pC">
+                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="46"/>
+                                                    <subviews>
+                                                        <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ui7-wq-51t">
+                                                            <rect key="frame" x="0.0" y="0.0" width="374" height="46"/>
+                                                            <subviews>
+                                                                <textField contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Amount" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="2gl-kG-Rqt">
+                                                                    <rect key="frame" x="12" y="0.0" width="362" height="46"/>
+                                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <accessibility key="accessibilityConfiguration" identifier="WHApplePay.Deposit.AmountTextField"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                    <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                                                    <connections>
+                                                                        <outlet property="delegate" destination="-1" id="J5Q-a4-x3p"/>
+                                                                    </connections>
+                                                                </textField>
+                                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="u9J-nV-lAb">
+                                                                    <rect key="frame" x="342" y="11" width="24" height="24"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" secondItem="u9J-nV-lAb" secondAttribute="height" multiplier="1:1" id="Pjy-KJ-UaU"/>
+                                                                        <constraint firstAttribute="width" constant="24" id="aWe-ef-rlC"/>
+                                                                    </constraints>
+                                                                </imageView>
+                                                            </subviews>
+                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <constraints>
+                                                                <constraint firstItem="2gl-kG-Rqt" firstAttribute="leading" secondItem="hBH-Kq-Fph" secondAttribute="leading" constant="12" id="BEg-ce-TH4"/>
+                                                                <constraint firstAttribute="bottom" secondItem="2gl-kG-Rqt" secondAttribute="bottom" id="SsA-fO-I9S"/>
+                                                                <constraint firstItem="2gl-kG-Rqt" firstAttribute="top" secondItem="ui7-wq-51t" secondAttribute="top" id="UAH-7g-yAc"/>
+                                                                <constraint firstItem="hBH-Kq-Fph" firstAttribute="trailing" secondItem="u9J-nV-lAb" secondAttribute="trailing" constant="8" id="dWr-Ut-nR6"/>
+                                                                <constraint firstItem="u9J-nV-lAb" firstAttribute="centerY" secondItem="2gl-kG-Rqt" secondAttribute="centerY" id="dwh-KM-UgW"/>
+                                                                <constraint firstAttribute="trailing" secondItem="2gl-kG-Rqt" secondAttribute="trailing" id="oYG-Wb-z29"/>
+                                                            </constraints>
+                                                            <viewLayoutGuide key="safeArea" id="hBH-Kq-Fph"/>
+                                                        </view>
+                                                        <view hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lyP-DC-wR7">
+                                                            <rect key="frame" x="0.0" y="43" width="374" height="3"/>
+                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="3" id="4qt-M8-rLr"/>
+                                                            </constraints>
+                                                        </view>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="trailing" secondItem="lyP-DC-wR7" secondAttribute="trailing" id="8hM-bp-YcP"/>
+                                                        <constraint firstItem="lyP-DC-wR7" firstAttribute="leading" secondItem="RSN-fY-2pC" secondAttribute="leading" id="FrV-k3-flX"/>
+                                                        <constraint firstAttribute="height" constant="46" id="HV0-Zk-ovh"/>
+                                                        <constraint firstAttribute="bottom" secondItem="lyP-DC-wR7" secondAttribute="bottom" id="bxh-Rk-rOH"/>
+                                                        <constraint firstAttribute="bottom" secondItem="ui7-wq-51t" secondAttribute="bottom" id="eHF-Zy-e4R"/>
+                                                        <constraint firstAttribute="trailing" secondItem="ui7-wq-51t" secondAttribute="trailing" id="gDY-Un-zco"/>
+                                                        <constraint firstItem="ui7-wq-51t" firstAttribute="top" secondItem="RSN-fY-2pC" secondAttribute="top" id="hKP-Pj-IbB"/>
+                                                        <constraint firstItem="ui7-wq-51t" firstAttribute="leading" secondItem="RSN-fY-2pC" secondAttribute="leading" id="wzu-hf-VSR"/>
+                                                    </constraints>
+                                                </view>
+                                                <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="cCS-Ba-4qf" userLabel="errorStackView">
+                                                    <rect key="frame" x="0.0" y="52" width="374" height="0.0"/>
+                                                    <subviews>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ico_deposit_error" translatesAutoresizingMaskIntoConstraints="NO" id="xK1-2f-ARv">
+                                                            <rect key="frame" x="0.0" y="0.0" width="16" height="0.0"/>
+                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="RM1-ZO-4RO">
+                                                            <rect key="frame" x="24" y="0.0" width="350" height="0.0"/>
+                                                            <accessibility key="accessibilityConfiguration" identifier="WHApplePay.Deposit.ErrorLabel"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" priority="950" constant="16" id="TZ2-qK-T4y"/>
+                                                    </constraints>
+                                                    <viewLayoutGuide key="safeArea" id="Xv8-cz-HAQ"/>
+                                                </stackView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="LZz-8b-uSo" userLabel="buttonsStackView">
+                                                    <rect key="frame" x="0.0" y="58" width="374" height="46"/>
+                                                    <subviews>
+                                                        <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1eT-7U-FXc" customClass="DepositAmountValueButton" customModule="WHApplePay" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="0.0" width="124" height="46"/>
+                                                            <accessibility key="accessibilityConfiguration" identifier="WHApplePay.Deposit.FirstAmountButton"/>
+                                                            <state key="normal">
+                                                                <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </state>
+                                                            <connections>
+                                                                <action selector="increaseAmountButtonTapped:" destination="-1" eventType="touchUpInside" id="2Ov-PV-Qx2"/>
+                                                            </connections>
+                                                        </button>
+                                                        <button opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f3T-xd-dqV" customClass="DepositAmountValueButton" customModule="WHApplePay" customModuleProvider="target">
+                                                            <rect key="frame" x="125" y="0.0" width="124" height="46"/>
+                                                            <accessibility key="accessibilityConfiguration" identifier="WHApplePay.Deposit.SecondAmountButton"/>
+                                                            <state key="normal">
+                                                                <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </state>
+                                                            <connections>
+                                                                <action selector="increaseAmountButtonTapped:" destination="-1" eventType="touchUpInside" id="mtS-jN-zyj"/>
+                                                            </connections>
+                                                        </button>
+                                                        <button opaque="NO" clipsSubviews="YES" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="20P-Ee-GYh" customClass="DepositAmountValueButton" customModule="WHApplePay" customModuleProvider="target">
+                                                            <rect key="frame" x="250" y="0.0" width="124" height="46"/>
+                                                            <accessibility key="accessibilityConfiguration" identifier="WHApplePay.Deposit.ThirdAmountButton"/>
+                                                            <state key="normal">
+                                                                <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </state>
+                                                            <connections>
+                                                                <action selector="increaseAmountButtonTapped:" destination="-1" eventType="touchUpInside" id="gbe-vG-OJA"/>
+                                                            </connections>
+                                                        </button>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="46" id="LNZ-Zd-w25"/>
+                                                    </constraints>
+                                                    <viewLayoutGuide key="safeArea" id="rS9-m8-20g"/>
+                                                </stackView>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                </stackView>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="O26-Eo-iG5" userLabel="actionButtons">
+                                    <rect key="frame" x="0.0" y="246" width="374" height="52"/>
+                                    <subviews>
+                                        <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="374" placeholderIntrinsicHeight="200" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="vHS-Lw-Lma" userLabel="POCF Container View">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="0.0"/>
+                                            <subviews>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" placeholderIntrinsicWidth="293" placeholderIntrinsicHeight="117" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="h9B-tB-J8p">
+                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="0.0"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <accessibility key="accessibilityConfiguration" identifier="WHApplePay.POCFTextView"/>
+                                                    <string key="text">asdadsasdadasdad
+
+asdadsasdadasdad
+
+asdadsasdadasdad</string>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                    <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                                                </textView>
+                                            </subviews>
+                                        </stackView>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Raa-fy-I9C" userLabel="middleView">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="20"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lhg-ND-0On">
+                                                    <rect key="frame" x="0.0" y="9.6666666666666856" width="374" height="1"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g5f-IF-mCO">
+                                                            <rect key="frame" x="167" y="0.33333333333331439" width="40" height="0.0"/>
+                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="40" id="dW1-9d-RxZ"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="1" id="Rc6-ib-vI4"/>
+                                                        <constraint firstItem="g5f-IF-mCO" firstAttribute="centerX" secondItem="ICr-fn-H5R" secondAttribute="centerX" id="foq-gR-f0g"/>
+                                                        <constraint firstItem="g5f-IF-mCO" firstAttribute="centerY" secondItem="ICr-fn-H5R" secondAttribute="centerY" id="vMG-O2-0Mn"/>
+                                                    </constraints>
+                                                    <viewLayoutGuide key="safeArea" id="ICr-fn-H5R"/>
+                                                </view>
+                                            </subviews>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="Lhg-ND-0On" secondAttribute="trailing" id="7z7-GR-9k0"/>
+                                                <constraint firstItem="Lhg-ND-0On" firstAttribute="centerY" secondItem="Raa-fy-I9C" secondAttribute="centerY" id="EPY-gW-iL0"/>
+                                                <constraint firstAttribute="height" constant="20" id="LJX-Le-BRX"/>
+                                                <constraint firstItem="Lhg-ND-0On" firstAttribute="leading" secondItem="Raa-fy-I9C" secondAttribute="leading" id="ouI-dX-PIt"/>
+                                            </constraints>
+                                        </view>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="840-7Z-SRL" userLabel="multiplePaymentsButton">
+                                            <rect key="frame" x="0.0" y="32" width="374" height="20"/>
+                                            <accessibility key="accessibilityConfiguration" identifier="WHApplePay.Deposit.OtherPaymentButton"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="20" id="VpG-HC-IuZ"/>
+                                            </constraints>
+                                            <state key="normal">
+                                                <string key="title">Other Payment 
+Methods </string>
+                                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="multiplePaymentMethodsButtonTapped:" destination="-1" eventType="touchUpInside" id="WAL-LS-72I"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <viewLayoutGuide key="safeArea" id="bTZ-fu-tb1"/>
+                                </stackView>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="IVd-24-5GG" firstAttribute="leading" secondItem="ZEK-hR-QF4" secondAttribute="leading" constant="20" id="J1H-5w-9wl"/>
+                        <constraint firstAttribute="bottom" secondItem="IVd-24-5GG" secondAttribute="bottom" constant="20" id="KWz-Eq-Md9"/>
+                        <constraint firstItem="IVd-24-5GG" firstAttribute="width" secondItem="ZEK-hR-QF4" secondAttribute="width" constant="-40" id="MFb-On-iSV"/>
+                        <constraint firstItem="IVd-24-5GG" firstAttribute="top" secondItem="ZEK-hR-QF4" secondAttribute="top" constant="64" id="bIy-fD-l0F"/>
+                        <constraint firstAttribute="trailing" secondItem="IVd-24-5GG" secondAttribute="trailing" constant="20" id="uAK-26-wcH"/>
+                    </constraints>
+                </scrollView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <accessibility key="accessibilityConfiguration" identifier="WHApplePay.Deposit"/>
+            <gestureRecognizers/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="ZEK-hR-QF4" secondAttribute="bottom" id="EHJ-8I-PoJ"/>
+                <constraint firstItem="ZEK-hR-QF4" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="MsD-4Q-2rJ"/>
+                <constraint firstItem="ZEK-hR-QF4" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="Szv-z8-RIl"/>
+                <constraint firstItem="ZEK-hR-QF4" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="dEf-AD-Snz"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outletCollection property="gestureRecognizers" destination="Ltd-dv-Ehh" appends="YES" id="g5S-ab-W80"/>
+                <outletCollection property="gestureRecognizers" destination="bGA-T8-bfO" appends="YES" id="TSY-pM-2nB"/>
+            </connections>
+            <point key="canvasLocation" x="-3117" y="-709"/>
+        </view>
+        <tapGestureRecognizer enabled="NO" id="Ltd-dv-Ehh">
+            <connections>
+                <action selector="tapGestureAction:" destination="-1" id="3rf-HU-Jjw"/>
+            </connections>
+        </tapGestureRecognizer>
+        <panGestureRecognizer enabled="NO" minimumNumberOfTouches="1" id="bGA-T8-bfO">
+            <connections>
+                <action selector="tapGestureAction:" destination="-1" id="vxo-IH-HVw"/>
+            </connections>
+        </panGestureRecognizer>
+    </objects>
+    <resources>
+        <image name="ico_deposit_error" width="16" height="16"/>
+        <image name="img_apple_pay" width="125" height="80"/>
+    </resources>
+</document>
